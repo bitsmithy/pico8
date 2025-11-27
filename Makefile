@@ -8,7 +8,7 @@ PROJECT_CARTS_DIR := ./carts
 CARTS := $(shell find $(PROJECT_CARTS_DIR) -mindepth 1 -maxdepth 1 -type d -exec basename {} \; 2>/dev/null)
 
 # Targets
-.PHONY: all clean copy-carts help launch
+.PHONY: all copy-carts help launch
 
 all: copy-carts
 
@@ -65,11 +65,6 @@ copy-carts:
 		echo "</div>"; \
 	done
 	@echo "=========================================="
-
-clean:
-	@echo "Cleaning carts directory..."
-	@rm -rf $(PROJECT_CARTS_DIR)/*
-	@echo "Done!"
 
 launch:
 	@echo "Opening index.html in browser..."
