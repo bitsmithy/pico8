@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PICO-8 Carts by Bitsmithy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+
+      body {
+          font-family: 'Press Start 2P', 'Courier New', monospace;
+          background: #e8e8e8;
+          color: #333;
+          padding: 20px;
+          height: 100vh;
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+      }
+
+      header {
+          text-align: center;
+          padding: 40px 20px 20px;
+          flex-shrink: 0;
+          background: linear-gradient(135deg, #ff004d 0%, #ff77a8 100%);
+          margin: -20px -20px 0;
+          padding: 40px 20px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      h1 {
+          font-size: 16px;
+          color: #fff;
+          line-height: 1.6;
+          position: relative;
+          z-index: 1;
+          text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+      }
+
+      h1 a {
+          color: #fff;
+          text-decoration: underline;
+          text-decoration-thickness: 2px;
+          text-underline-offset: 4px;
+      }
+
+      h1 a:hover {
+          color: #ffccaa;
+      }
+
+      .subtitle {
+          margin-top: 16px;
+          font-size: 8px;
+          color: #666;
+      }
+
+      main {
+          flex: 1;
+          overflow-y: auto;
+          overflow-x: hidden;
+      }
+
+      .carts-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(344px, 1fr));
+          gap: 24px;
+          max-width: 1400px;
+          margin: 0 auto;
+          padding: 20px;
+      }
+
+      .cart-item {
+          text-align: center;
+          color: #333;
+          transition: all 0.2s ease;
+          padding: 18px;
+      }
+
+      .cart-item:hover {
+          transform: translateY(-2px);
+      }
+
+      .cart-item > a {
+          text-decoration: none;
+          color: inherit;
+          display: block;
+      }
+
+      .cart-image {
+          width: 320px;
+          height: 320px;
+          image-rendering: pixelated;
+          image-rendering: -moz-crisp-edges;
+          image-rendering: crisp-edges;
+          border: 2px solid #333;
+          background: #000;
+          display: block;
+          margin: 0 auto;
+      }
+
+      .cart-item:hover .cart-image {
+          border-color: #666;
+      }
+
+      .cart-name {
+          margin-top: 12px;
+          font-size: 10px;
+          color: #333;
+          line-height: 1.4;
+      }
+
+      .cart-comment {
+          margin-top: 8px;
+          font-size: 7px;
+          color: #666;
+          line-height: 1.4;
+      }
+
+      .cart-comment a {
+          color: #29adff;
+          text-decoration: underline;
+          text-decoration-thickness: 1px;
+          text-underline-offset: 2px;
+      }
+
+      .cart-comment a:hover {
+          color: #83769c;
+      }
+
+      .empty-state {
+          text-align: center;
+          padding: 80px 20px;
+          color: #999;
+          font-size: 12px;
+          line-height: 1.6;
+      }
+
+      footer {
+          text-align: center;
+          padding: 20px;
+          font-size: 8px;
+          color: #fff;
+          flex-shrink: 0;
+          background: #444;
+          margin: 0 -20px -20px;
+          box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      footer a {
+          color: #29adff;
+          text-decoration: underline;
+          text-decoration-thickness: 1px;
+          text-underline-offset: 2px;
+      }
+
+      footer a:hover {
+          color: #83769c;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1><a href="https://www.lexaloffle.com/pico-8.php" target="_blank">PICO-8</a> games by bitsmithy</h1>
+    </header>
+    <main>
+      <div class="carts-grid">
+        <div class="cart-item">
+          <a href="carts/cave/index.html">
+            <img src="carts/cave/cave.p8.png" alt="Cave" class="cart-image">
+            <div class="cart-name">Cave Diver</div>
+          </a>
+          <div class="cart-comment">with guidance from <a href="https://mboffin.itch.io/gamedev-with-pico-8-issue1" target="_blank">Gamedev with PICO-8</a></div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>Made with <a href="https://www.lexaloffle.com/pico-8.php" target="_blank">PICO-8</a></p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+
+# Linux
+*~
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temp files
+*.tmp
+*.bak
