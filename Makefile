@@ -4,8 +4,8 @@
 PICO8_CARTS_DIR := $(HOME)/.lexaloffle/pico-8/carts
 PROJECT_CARTS_DIR := ./carts
 
-# Automatically detect carts from the carts directory
-CARTS := $(shell find $(PROJECT_CARTS_DIR) -mindepth 1 -maxdepth 1 -type d -exec basename {} \; 2>/dev/null)
+# Automatically detect carts from the PICO-8 directory by finding .html files
+CARTS := $(shell ls $(PICO8_CARTS_DIR)/*.html 2>/dev/null | xargs -n1 basename | sed 's/\.html$$//')
 
 # Targets
 .PHONY: all copy-carts help launch
